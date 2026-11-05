@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Demonstration checkout — AVÉLIS</title>
+  <meta name="description" content="A demonstration checkout for AVÉLIS, a fictional concept brand. No payment is processed and no real order is placed.">
+  <meta name="author" content="Efim Korolev">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4EFE5">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/store.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+<body class="checkout-page">
+  <a class="skip-link" href="#checkout">Skip to the checkout</a>
+
+  <header class="site-header is-solid">
+    <a class="brand" href="index.html" aria-label="AVÉLIS, home">
+      <img class="brand__white" src="assets/logo/avelis-wordmark-white.svg" alt="" width="321" height="67">
+      <img class="brand__violet" src="assets/logo/avelis-wordmark-violet.svg" alt="" width="321" height="67">
+    </a>
+    <a class="back" href="index.html#collection"><span aria-hidden="true">←</span> Continue shopping</a>
+  </header>
+
+  <main class="checkout" id="checkout">
+    <noscript><p class="checkout__noscript">The demonstration checkout runs in your browser and needs JavaScript. <a href="index.html#collection">Return to the collection.</a></p></noscript>
+
+    <!-- Nothing is chosen until the script has read the bag. -->
+    <div class="checkout__empty" data-view="empty" hidden>
+      <h1 class="d" tabindex="-1">Your bag is empty.</h1>
+      <a class="link" href="index.html#collection">Discover the collection</a>
+      <p class="checkout__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+    </div>
+
+    <div class="checkout__flow" data-view="flow" hidden>
+      <nav aria-label="Checkout steps">
+        <ol class="steps" data-steps>
+          <li data-for="bag"><a href="#bag">Bag</a></li>
+          <li data-for="contact"><a href="#contact">Contact</a></li>
+          <li data-for="shipping"><a href="#shipping">Shipping</a></li>
+          <li data-for="summary"><a href="#summary">Summary</a></li>
+        </ol>
+      </nav>
+
+      <div class="checkout__columns">
+        <div class="checkout__main">
+
+          <section class="step step--bag" data-step="bag" hidden>
+            <div class="step--bag__intro">
+              <h1 class="d step__title" tabindex="-1">Review your bag</h1>
+              <p class="checkout__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+            </div>
+            <div>
+              <p class="bag__undo" data-undo hidden><span data-undo-text></span> <button class="link" type="button" data-undo-button>Undo</button></p>
+              <ul class="bag__list" data-lines></ul>
+              <p class="bag__total"><span>Total<small>Concept prices</small></span><strong class="d" data-total></strong></p>
+              <a class="primary step__next" href="#contact">Continue to contact</a>
+            </div>
+          </section>
+
+          <section class="step" data-step="contact" hidden>
+            <h1 class="d step__title" tabindex="-1">Contact</h1>
+            <p class="step__note">Please use fictional details. Nothing you enter is saved or sent anywhere.</p>
+            <button class="link step__sample" type="button" data-sample="contact">Use sample details</button>
+            <form data-form="contact" novalidate>
+              <div class="field-row">
+                <div class="field"><label for="first-name">First name</label><input id="first-name" name="first-name" type="text" maxlength="60" autocomplete="off" required><p class="field__error" id="first-name-error" hidden></p></div>
+                <div class="field"><label for="last-name">Last name</label><input id="last-name" name="last-name" type="text" maxlength="60" autocomplete="off" required><p class="field__error" id="last-name-error" hidden></p></div>
+              </div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" maxlength="120" autocomplete="off" spellcheck="false" required><p class="field__error" id="email-error" hidden></p></div>
+              <button class="primary step__next" type="submit">Continue to shipping</button>
+            </form>
+            <a class="back step__back" href="#bag"><span aria-hidden="true">←</span> Back to bag</a>
+          </section>
+
+          <section class="step" data-step="shipping" hidden>
+            <h1 class="d step__title" tabindex="-1">Demonstration shipping</h1>
+            <p class="step__note">Please use a fictional address. Nothing will be shipped.</p>
+            <button class="link step__sample" type="button" data-sample="shipping">Use sample details</button>
+            <form data-form="shipping" novalidate>
+              <div class="field"><label for="address">Address</label><input id="address" name="address" type="text" maxlength="100" autocomplete="off" required><p class="field__error" id="address-error" hidden></p></div>
+              <div class="field"><label for="address2">Apartment or floor <span class="field__optional">(optional)</span></label><input id="address2" name="address2" type="text" maxlength="60" autocomplete="off"><p class="field__error" id="address2-error" hidden></p></div>
+              <div class="field-row">
+                <div class="field"><label for="city">City</label><input id="city" name="city" type="text" maxlength="60" autocomplete="off" required><p class="field__error" id="city-error" hidden></p></div>
+                <div class="field"><label for="postcode">Postal code</label><input id="postcode" name="postcode" type="text" maxlength="10" autocomplete="off" spellcheck="false" required><p class="field__error" id="postcode-error" hidden></p></div>
+              </div>
+              <div class="field"><label for="country">Country</label><input id="country" name="country" type="text" maxlength="60" autocomplete="off" required><p class="field__error" id="country-error" hidden></p></div>
+              <button class="primary step__next" type="submit">Continue to summary</button>
+            </form>
+            <a class="back step__back" href="#contact"><span aria-hidden="true">←</span> Back to contact</a>
+          </section>
+
+          <section class="step" data-step="summary" hidden>
+            <h1 class="d step__title" tabindex="-1">Order summary</h1>
+            <p class="step__note">Please check the details below. No payment details are requested in this demonstration.</p>
+            <dl class="review">
+              <div><dt>Contact</dt><dd data-review="contact"></dd><dd class="review__edit"><a class="line__remove" href="#contact" aria-label="Edit contact details">Edit</a></dd></div>
+              <div><dt>Ship to</dt><dd data-review="shipping"></dd><dd class="review__edit"><a class="line__remove" href="#shipping" aria-label="Edit shipping details">Edit</a></dd></div>
+              <div class="review__bag"><dt>Bag</dt><dd data-review="bag"></dd><dd class="review__edit"><a class="line__remove" href="#bag" aria-label="Edit bag">Edit</a></dd></div>
+              <div><dt>Shipping</dt><dd>Not applicable in this demonstration</dd></div>
+              <div><dt>Payment</dt><dd>None. No payment is taken</dd></div>
+              <div class="review__bag"><dt>Total</dt><dd data-review="total"></dd></div>
+            </dl>
+            <p class="checkout__statement">This is a demonstration checkout. No payment has been processed and no real order has been placed.</p>
+            <button class="primary step__next" type="button" data-complete>Complete demonstration</button>
+            <a class="back step__back" href="#shipping"><span aria-hidden="true">←</span> Back to shipping</a>
+          </section>
+        </div>
+
+        <aside class="checkout__aside" aria-label="Your bag">
+          <details class="aside" data-aside>
+            <summary><span>Your bag</span><strong class="d" data-aside-total></strong></summary>
+            <ul class="aside__lines" data-aside-lines></ul>
+            <p class="bag__total"><span>Total<small>Concept prices</small></span><strong class="d" data-total></strong></p>
+            <p class="aside__edit"><a class="line__remove" href="#bag">Edit bag</a></p>
+            <p class="checkout__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+          </details>
+        </aside>
+      </div>
+    </div>
+
+    <section class="confirm" data-view="confirmation" aria-labelledby="confirm-title" hidden>
+      <div class="confirm__objects" data-confirm-objects aria-hidden="true"></div>
+      <div class="confirm__copy">
+        <h1 class="d confirm__title" id="confirm-title" tabindex="-1">The demonstration is complete.</h1>
+        <p class="confirm__statement">This is a demonstration checkout. No payment has been processed and no real order has been placed.</p>
+        <p class="l confirm__label">Demonstration order reference</p>
+        <p class="d confirm__ref" data-confirm-ref></p>
+        <ul class="confirm__lines" data-confirm-lines></ul>
+        <p class="bag__total"><span>Total<small>Concept prices</small></span><strong class="d" data-confirm-total></strong></p>
+        <div class="confirm__links">
+          <a class="primary" href="index.html">Return to AVÉLIS</a>
+          <a class="link" href="index.html#collection">Discover the collection</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="sr-only" aria-live="polite" data-live></p>
+  </main>
+
+  <footer class="closing closing--compact">
+    <p class="closing__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+    <div class="closing__row">
+      <span>Concept project. AVÉLIS is fictional.</span>
+      <nav aria-label="Footer">
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#film">Film</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <span class="closing__credit">An independent concept project by Efim Korolev.</span>
+    </div>
+  </footer>
+</body>
+</html>

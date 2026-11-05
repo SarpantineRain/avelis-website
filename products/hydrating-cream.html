@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hydrating Cream — AVÉLIS</title>
+  <meta name="description" content="Hydrating Cream, 50 ml: an AVÉLIS concept object. A fictional brand, with a demonstration price.">
+  <meta name="author" content="Efim Korolev">
+  <meta name="theme-color" content="#F4EFE5">
+  <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="../js/store.js" defer></script>
+  <script src="../js/bag.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#product">Skip to the product</a>
+
+  <header class="site-header is-solid" data-header>
+    <a class="brand" href="../index.html" aria-label="AVÉLIS, home">
+      <img class="brand__white" src="../assets/logo/avelis-wordmark-white.svg" alt="" width="321" height="67">
+      <img class="brand__violet" src="../assets/logo/avelis-wordmark-violet.svg" alt="" width="321" height="67">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#collection">Collection</a>
+      <a href="../index.html#film">Film</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+    <div class="site-tools">
+      <button class="tool" type="button" data-bag-open aria-haspopup="dialog">Bag <span class="tool__count"></span></button>
+      <button class="tool tool--menu" type="button" data-menu-open aria-haspopup="dialog">Menu</button>
+    </div>
+  </header>
+
+  <dialog class="menu" data-menu aria-label="Menu">
+    <button class="tool menu__close" type="button" data-menu-close>Close</button>
+    <nav aria-label="Menu links">
+      <a href="../index.html#collection" data-menu-link>Collection</a>
+      <a href="../index.html#film" data-menu-link>Film</a>
+      <a href="../index.html#about" data-menu-link>About</a>
+    </nav>
+    <p class="menu__note">AVÉLIS is a fictional concept brand.</p>
+  </dialog>
+
+  <main id="product">
+    <article aria-labelledby="product-name">
+      <section class="band band--sky pdp pdp--cream">
+        <div class="pdp__inner">
+          <a class="back" href="../index.html#collection"><span aria-hidden="true">←</span> Back to the collection</a>
+          <div class="pdp__intro reveal">
+            <p class="l pdp__index"><span aria-hidden="true">I &nbsp; </span>The collection</p>
+            <h1 class="d pdp__name" id="product-name">Hydrating Cream</h1>
+            <p class="d pdp__line">An expression of softness.</p>
+            <p class="t pdp__text">Formulated as a study in texture, light and simplicity.</p>
+          </div>
+          <img class="pdp__product" src="../assets/cgi/avelis_tube_02_cutout_100.webp"
+               srcset="../assets/cgi/avelis_tube_02_cutout_75.webp 465w, ../assets/cgi/avelis_tube_02_cutout_100.webp 620w"
+               sizes="(min-width: 960px) 34vw, 86vw" width="620" height="1125" fetchpriority="high" decoding="async"
+               alt="An AVÉLIS Hydrating Cream tube standing upright on its frosted cap, with a soft shadow beside it.">
+          <div class="pdp__buy reveal">
+            <p class="spec pdp__spec"><span>50 ml</span><span>€48</span><span>Concept price</span></p>
+            <div class="purchase" data-purchase>
+              <div class="qty" role="group" aria-label="Quantity">
+                <button type="button" data-qty-step="-1" aria-label="Decrease quantity">−</button>
+                <output data-qty-value aria-live="polite">1</output>
+                <button type="button" data-qty-step="1" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="primary" type="button" data-add="hydrating-cream">Add to bag</button>
+            </div>
+            <noscript><p class="pdp__disclosure">The bag needs JavaScript to work.</p></noscript>
+            <p class="pdp__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--ivory details" aria-label="Product details and design notes">
+        <div class="details__inner reveal">
+          <div class="details__facts">
+            <h2 class="l details__label">Product details</h2>
+            <dl>
+            <div><dt>Format</dt><dd>Soft tube, resting on its cap</dd></div>
+            <div><dt>Volume</dt><dd>50 ml</dd></div>
+            <div><dt>Dimensions</dt><dd>145.5 × 57.2 × 35 mm</dd></div>
+            <div><dt>Cap</dt><dd>Frosted, 33 mm wide, with 48 vertical ribs</dd></div>
+            </dl>
+          </div>
+          <div class="details__notes">
+            <h2 class="l details__label">Materials and design notes</h2>
+            <p class="d details__lead">A single form that moves from circle to line.</p>
+            <p class="t">The body begins as a 35 mm circle and flattens into a straight sealed edge. Its perimeter stays the same along the whole length, so the change reads as one continuous gesture.</p>
+            <p class="t">The frosted cap carries 48 vertical ribs, which break the light into fine lines at the base.</p>
+            <p class="t">The label is kept to the wordmark, a single rule, the product name and the volume.</p>
+            <p class="details__small">Design notes describe the 3D object. All descriptions are conceptual creative copy, not verified cosmetic performance claims.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="band band--sky-floor">
+        <div class="comp comp--fan reveal">
+          <img class="comp__product" src="../assets/cgi/avelis_tube_01_alt_cutout_100.webp"
+               srcset="../assets/cgi/avelis_tube_01_alt_cutout_75.webp 1432w, ../assets/cgi/avelis_tube_01_alt_cutout_100.webp 1910w"
+               sizes="(min-width: 960px) 83vw, 100vw" width="1910" height="1021" loading="lazy" decoding="async"
+               alt="Six Hydrating Cream tubes fanned out in an arc, every label facing forward.">
+          <p class="d comp__line">One form,<br>unfolded.</p>
+        </div>
+      </div>
+    </article>
+
+    <nav class="related" aria-label="Continue the collection">
+      <div class="related__head">
+        <h2 class="l">Continue the collection</h2>
+        <a class="back" href="../index.html#collection"><span aria-hidden="true">←</span> Back to the collection</a>
+      </div>
+      <div class="related__grid">
+        <a class="related__item related__item--sand" href="satin-lipstick.html" data-product-link>
+          <span class="l related__index" aria-hidden="true">II</span>
+          <span class="d related__name">Satin Lipstick</span>
+          <span class="spec related__spec"><span>€39</span><span>Concept price</span></span>
+          <img src="../assets/cgi/avelis_lipstick_02_cutout_75.webp" alt="" width="494" height="1032" loading="lazy" decoding="async">
+        </a>
+        <a class="related__item related__item--green" href="nourishing-balm.html" data-product-link>
+          <span class="l related__index" aria-hidden="true">III</span>
+          <span class="d related__name">Nourishing Balm</span>
+          <span class="spec related__spec"><span>50 ml</span><span>€42</span><span>Concept price</span></span>
+          <img src="../assets/cgi/avelis_jar_01_cutout_75.webp" alt="" width="646" height="890" loading="lazy" decoding="async">
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="closing closing--compact">
+    <p class="closing__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+    <div class="closing__row">
+      <span>Concept project. AVÉLIS is fictional.</span>
+      <nav aria-label="Footer">
+        <a href="../index.html#collection">Collection</a>
+        <a href="../index.html#film">Film</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+      <span class="closing__credit">An independent concept project by Efim Korolev.</span>
+    </div>
+  </footer>
+</body>
+</html>

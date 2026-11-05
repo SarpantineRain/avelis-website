@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AVÉLIS — Form, texture and motion for skincare</title>
+  <meta name="description" content="AVÉLIS is a fictional concept brand: three skincare and cosmetics objects designed from scratch in 3D, presented through film and editorial composition.">
+  <meta name="author" content="Efim Korolev">
+  <meta name="theme-color" content="#141210">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/poster_hero_1920.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+  <script src="js/store.js" defer></script>
+  <script src="js/bag.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#collection">Skip to the collection</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="AVÉLIS, back to top">
+      <img class="brand__white" src="assets/logo/avelis-wordmark-white.svg" alt="" width="321" height="67">
+      <img class="brand__violet" src="assets/logo/avelis-wordmark-violet.svg" alt="" width="321" height="67">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#collection">Collection</a>
+      <a href="#film">Film</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="site-tools">
+      <button class="tool" type="button" data-bag-open aria-haspopup="dialog">Bag <span class="tool__count"></span></button>
+      <button class="tool tool--menu" type="button" data-menu-open aria-haspopup="dialog">Menu</button>
+    </div>
+  </header>
+
+  <dialog class="menu" data-menu aria-label="Menu">
+    <button class="tool menu__close" type="button" data-menu-close>Close</button>
+    <nav aria-label="Menu links">
+      <a href="#collection" data-menu-link>Collection</a>
+      <a href="#film" data-menu-link>Film</a>
+      <a href="#about" data-menu-link>About</a>
+    </nav>
+    <p class="menu__note">AVÉLIS is a fictional concept brand.</p>
+  </dialog>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" data-hero aria-labelledby="hero-title">
+      <video class="hero__video" data-hero-video autoplay muted loop playsinline preload="auto"
+             poster="assets/images/poster_hero_1920.webp" width="1920" height="1080"
+             aria-label="AVÉLIS film: the jar, the tube and the lipstick in motion, ending on the AVÉLIS wordmark. Muted, 34 seconds, looping.">
+        <source src="assets/video/avelis_reel_mobile_720p.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source src="assets/video/avelis_reel_final_16x9_v3.mp4" type="video/mp4">
+      </video>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <h1 id="hero-title" class="d">Form, texture and motion for skincare.</h1>
+        <a class="link hero__cta" href="#collection">Discover the collection</a>
+      </div>
+      <div class="hero__aside">
+        <span class="l hero__label">A 3D product &amp; motion concept</span>
+        <button class="control" type="button" data-hero-toggle aria-label="Pause the film">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path data-icon d="M4 2h3v12H4zM9 2h3v12H9z"/></svg>
+          <span data-toggle-label>Pause</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section id="collection" aria-label="The collection">
+
+      <article id="hydrating-cream" aria-labelledby="cream-name">
+        <div class="band band--sky">
+          <div class="comp comp--cream reveal">
+            <h2 class="l comp__label" id="cream-name"><span aria-hidden="true">I &nbsp; </span>Hydrating Cream</h2>
+            <p class="d comp__line">An expression of softness.</p>
+            <img class="comp__product" src="assets/cgi/avelis_tube_02_cutout_100.webp"
+                 srcset="assets/cgi/avelis_tube_02_cutout_75.webp 465w, assets/cgi/avelis_tube_02_cutout_100.webp 620w"
+                 sizes="(min-width: 960px) 34vw, 86vw" width="620" height="1125" loading="lazy" decoding="async"
+                 alt="An AVÉLIS Hydrating Cream tube standing upright on its frosted cap, with a soft shadow beside it.">
+            <div class="buy">
+              <p class="t">Formulated as a study in texture, light and simplicity.</p>
+              <p class="spec"><span>50 ml</span><span>€48</span><span>Concept price</span></p>
+              <div class="acts">
+                <a class="link" href="products/hydrating-cream.html" data-product-link>Discover</a>
+                <button class="link" type="button" data-add="hydrating-cream">Add to bag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="band band--sky-floor">
+          <div class="comp comp--fan reveal">
+            <img class="comp__product" src="assets/cgi/avelis_tube_01_alt_cutout_100.webp"
+                 srcset="assets/cgi/avelis_tube_01_alt_cutout_75.webp 1432w, assets/cgi/avelis_tube_01_alt_cutout_100.webp 1910w"
+                 sizes="(min-width: 960px) 83vw, 100vw" width="1910" height="1021" loading="lazy" decoding="async"
+                 alt="Six Hydrating Cream tubes fanned out in an arc, every label facing forward.">
+            <p class="d comp__line">One form,<br>unfolded.</p>
+          </div>
+        </div>
+      </article>
+
+      <article id="satin-lipstick" aria-labelledby="lipstick-name">
+        <div class="band band--lipstick">
+          <div class="comp comp--cluster reveal">
+            <h2 class="l comp__label" id="lipstick-name"><span aria-hidden="true">II &nbsp; </span>Satin Lipstick</h2>
+            <p class="d comp__line">Colour in its most refined form.</p>
+            <img class="comp__product" src="assets/cgi/avelis_lipstick_01_cutout_100.webp"
+                 srcset="assets/cgi/avelis_lipstick_01_cutout_75.webp 1096w, assets/cgi/avelis_lipstick_01_cutout_100.webp 1462w"
+                 sizes="(min-width: 960px) 67vw, 100vw" width="1462" height="1396" loading="lazy" decoding="async"
+                 alt="Five Satin Lipsticks with ivory cases and red bullets, floating along a rising diagonal.">
+            <div class="buy">
+              <p class="t">A sculptural study of satin, metal and delicate detail.</p>
+              <p class="spec"><span>€39</span><span>Concept price</span></p>
+              <div class="acts">
+                <a class="link" href="products/satin-lipstick.html" data-product-link>Discover</a>
+                <button class="link" type="button" data-add="satin-lipstick">Add to bag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="band band--sand">
+          <div class="comp comp--lift reveal">
+            <img class="comp__product" src="assets/cgi/avelis_lipstick_02_cutout_100.webp"
+                 srcset="assets/cgi/avelis_lipstick_02_cutout_75.webp 494w, assets/cgi/avelis_lipstick_02_cutout_100.webp 658w"
+                 sizes="(min-width: 960px) 29vw, 60vw" width="658" height="1376" loading="lazy" decoding="async"
+                 alt="One Satin Lipstick with its cap lifted above the case, revealing the red bullet and metal rings.">
+            <p class="d comp__line">A quiet reveal<br>of colour.</p>
+            <p class="t comp__note">Satin, metal and one note of red.</p>
+          </div>
+        </div>
+      </article>
+
+      <article id="nourishing-balm" aria-labelledby="balm-name">
+        <div class="band band--green">
+          <div class="comp comp--balm reveal reveal--fade">
+            <h2 class="l comp__label" id="balm-name"><span aria-hidden="true">III &nbsp; </span>Nourishing Balm</h2>
+            <p class="d comp__line"><span>Care, reduced</span> <span>to its essence.</span></p>
+            <img class="comp__product" src="assets/cgi/avelis_jar_01_cutout_100.webp"
+                 srcset="assets/cgi/avelis_jar_01_cutout_75.webp 646w, assets/cgi/avelis_jar_01_cutout_100.webp 861w"
+                 sizes="(min-width: 960px) 51vw, (min-width: 640px) 640px, 100vw" width="861" height="1186" loading="lazy" decoding="async"
+                 alt="A Nourishing Balm glass jar with a metal lid, floating above a rough pale stone.">
+            <div class="buy">
+              <p class="t">A study of material, reflection and quiet elegance.</p>
+              <p class="spec"><span>50 ml</span><span>€42</span><span>Concept price</span></p>
+              <div class="acts">
+                <a class="link" href="products/nourishing-balm.html" data-product-link>Discover</a>
+                <button class="link" type="button" data-add="nourishing-balm">Add to bag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="band band--reveal">
+          <div class="comp comp--dark">
+            <img class="comp__product reveal reveal--fade" src="assets/cgi/avelis_jar_03_framed_2560_lossless.webp"
+                 srcset="assets/cgi/avelis_jar_03_framed_1920_lossless.webp 1920w, assets/cgi/avelis_jar_03_framed_2560_lossless.webp 2560w"
+                 sizes="(min-width: 960px) 100vw, 160vw" width="2560" height="1440" loading="lazy" decoding="async"
+                 alt="The balm jar almost black against the dark ground, its outline drawn by a warm rim of light.">
+            <p class="disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- FILM -->
+    <section class="film" id="film" data-film aria-labelledby="film-title">
+      <div class="film__frame">
+        <video class="film__video" data-film-video controls muted loop playsinline preload="none"
+               poster="assets/images/poster_film_f0380_1920.webp" width="1920" height="1080"
+               aria-label="AVÉLIS film, 34 seconds. Starts only when you press play.">
+          <source src="assets/video/avelis_reel_mobile_720p.mp4" type="video/mp4" media="(max-width: 767px)">
+          <source src="assets/video/avelis_reel_final_16x9_v3.mp4" type="video/mp4">
+        </video>
+        <div class="film__shade" aria-hidden="true"></div>
+        <div class="film__corner" aria-hidden="true"></div>
+      </div>
+      <h2 id="film-title" class="d film__title">Designed<br>to move</h2>
+      <div class="film__controls">
+        <button class="control" type="button" data-film-toggle aria-label="Play the film">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path data-icon d="M4 2l10 6-10 6z"/></svg>
+          <span data-toggle-label>Play</span>
+        </button>
+        <button class="control" type="button" data-sound-toggle aria-pressed="false">Sound off</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="band band--ivory" id="about" aria-labelledby="about-title">
+      <div class="comp comp--about reveal">
+        <h2 id="about-title" class="d comp__line">AVÉLIS explores the relationship between form, material and motion through a contemporary vision of skincare.</h2>
+        <p class="t comp__note">A fictional concept brand and personal project: every product was designed from scratch.</p>
+      </div>
+    </section>
+
+    <!-- THE CREATOR -->
+    <section class="creator" id="creator" aria-labelledby="creator-title">
+      <div class="creator__inner reveal">
+        <h2 class="d creator__title" id="creator-title">The creative<br>mind behind<br>AVÉLIS</h2>
+        <div class="creator__text">
+          <p class="creator__lead">AVÉLIS is an independent creative exploration of beauty, form and visual storytelling.</p>
+          <p>Created as a personal project, it brings together product design, 3D visualisation, CGI, motion and digital experience.</p>
+          <p>From the first product concept to the final digital presentation, every element was developed as part of one cohesive creative vision.</p>
+        </div>
+        <ul class="creator__disciplines" aria-label="Disciplines">
+          <li>3D Product Design</li>
+          <li>CGI &amp; Rendering</li>
+          <li>Motion Design</li>
+          <li>Art Direction</li>
+          <li>Web Design &amp; Development</li>
+        </ul>
+        <p class="creator__credit">Concept &amp; Creative Direction — Efim Korolev</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- CLOSING FRAME -->
+  <footer class="closing">
+    <div class="closing__mark reveal">
+      <img src="assets/logo/avelis-wordmark-violet.svg" alt="AVÉLIS" width="321" height="67" loading="lazy">
+      <p>Elegance in Every Detail.</p>
+    </div>
+    <p class="closing__disclosure">AVÉLIS is a fictional concept brand. Prices and checkout are for demonstration purposes only.</p>
+    <div class="closing__row">
+      <span>Concept project. AVÉLIS is fictional.</span>
+      <nav aria-label="Footer">
+        <a href="#collection">Collection</a>
+        <a href="#film">Film</a>
+        <a href="#about">About</a>
+      </nav>
+      <span class="closing__credit">An independent concept project by Efim Korolev.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
